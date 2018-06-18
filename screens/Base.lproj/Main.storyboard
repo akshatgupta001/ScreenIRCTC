@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yfZ-jo-qMK">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="17F77" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yfZ-jo-qMK">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -36,14 +36,24 @@
                         <viewControllerLayoutGuide type="bottom" id="kEv-RP-eda"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vg4-Tg-vpt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LvL-d9-dNe">
+                                <rect key="frame" x="163" y="232" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="TC8-2t-ALP"/>
+                                    <constraint firstAttribute="height" constant="20" id="cmJ-Hb-tZi"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40e-21-Pxi">
-                                <rect key="frame" x="124" y="353" width="166" height="30"/>
+                                <rect key="frame" x="104.5" y="318.5" width="166" height="30"/>
                                 <color key="backgroundColor" red="0.92671204411822505" green="0.95686274510000002" blue="0.1387866218156418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="ALt-bD-WUI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="NZN-0A-SZ3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="Zx3-Ky-9DD"/>
                                     <constraint firstAttribute="height" constant="30" id="fPX-gy-X14"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
@@ -55,19 +65,13 @@
                                     <action selector="buttonPressed:" destination="92x-gy-jR1" eventType="touchUpInside" id="Ux0-fm-YOw"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LvL-d9-dNe">
-                                <rect key="frame" x="198" y="267" width="20" height="20"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LvL-d9-dNe" firstAttribute="top" secondItem="CXd-go-hGa" secondAttribute="bottom" constant="203" id="LdQ-PB-0sJ"/>
-                            <constraint firstItem="40e-21-Pxi" firstAttribute="centerX" secondItem="Vg4-Tg-vpt" secondAttribute="centerX" id="MBK-cX-eIh"/>
-                            <constraint firstItem="40e-21-Pxi" firstAttribute="top" secondItem="LvL-d9-dNe" secondAttribute="bottom" constant="66" id="Q5Q-ta-dLR"/>
-                            <constraint firstItem="LvL-d9-dNe" firstAttribute="leading" secondItem="Vg4-Tg-vpt" secondAttribute="leadingMargin" constant="178" id="TRf-Ff-8Ur"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LvL-d9-dNe" secondAttribute="trailing" constant="176" id="bHq-bu-dac"/>
-                            <constraint firstItem="40e-21-Pxi" firstAttribute="centerY" secondItem="Vg4-Tg-vpt" secondAttribute="centerY" id="fKX-GK-SxX"/>
+                            <constraint firstItem="LvL-d9-dNe" firstAttribute="top" secondItem="CXd-go-hGa" secondAttribute="bottom" constant="168" id="RBn-PZ-Zlx"/>
+                            <constraint firstItem="LvL-d9-dNe" firstAttribute="leading" secondItem="Vg4-Tg-vpt" secondAttribute="leadingMargin" constant="147" id="iUc-9B-bRd"/>
+                            <constraint firstItem="40e-21-Pxi" firstAttribute="top" secondItem="LvL-d9-dNe" secondAttribute="bottom" constant="66.5" id="kH4-Yl-ziQ"/>
+                            <constraint firstItem="40e-21-Pxi" firstAttribute="leading" secondItem="Vg4-Tg-vpt" secondAttribute="leadingMargin" constant="88.5" id="vdG-EE-EHP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="back1" id="tRp-oi-ZPg">
@@ -91,7 +95,7 @@
                         <viewControllerLayoutGuide type="bottom" id="liC-5E-zo1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jsm-D3-7zD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

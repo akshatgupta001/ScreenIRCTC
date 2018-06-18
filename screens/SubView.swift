@@ -53,7 +53,7 @@ class SubView: UIViewController {
     }
     func dis(){
         print("123")
-        self.navigationController?.popViewController(animated: true)
+        
 
     }
     

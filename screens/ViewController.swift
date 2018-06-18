@@ -19,7 +19,7 @@ class ViewController: SubView {
         UIApplication.shared.beginIgnoringInteractionEvents()
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: false)
     }
-    func action(){
+    @objc func action(){
         activityIndicator.isHidden = true
         UIApplication.shared.endIgnoringInteractionEvents()
         performSegue(withIdentifier: "third", sender: Any?.self)
