@@ -18,7 +18,10 @@ class secondVC: SubView {
        
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(true)
+        
+        
             let label = UILabel()
             label.text = "MAKEPAYMENT"
         
@@ -41,9 +44,12 @@ class secondVC: SubView {
         
     
        
-        self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo),UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(dis))], animated: true)
+        self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo),UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)], animated: true)
+        
+       // self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo)], animated: true)
     
     }
+    
      
    
 
@@ -58,3 +64,4 @@ class secondVC: SubView {
     */
 
 }
+
