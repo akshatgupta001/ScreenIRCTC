@@ -10,23 +10,65 @@ import UIKit
 
 class secondVC: SubView {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    let epopView = UIView()
+    
+    @IBOutlet weak var eWalletBtn: UIButton!
+    @IBOutlet weak var eWalletView: UIView!
+    
+    
+    @IBAction func eWalletPressed(_ sender: Any) {
+        
+        if eWalletBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off") {
+            eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
+            addEWalletView()
+        }else {
+            eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
+            epopView.removeFromSuperview()
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
     
-        
-       
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(true)
+        setTitle(title: "Make Payment")
+        setNavBar()
+      
+    
+    }
+    
+    func addEWalletView(){
         
         
-            let label = UILabel()
-            label.text = "MAKEPAYMENT"
+        epopView.frame = CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: 90)
+       
+        let irctcView = setLabel(frame: .init(), x: 0, y: 0)
+        let olaMoneyView = setLabel(frame: .init(),x: 0,y: 1)
+        let jioMoneyView = setLabel(frame: .init(),x: 1,y: 0)
+        let airtelMoneyView = setLabel(frame: .init(),x: 1,y: 1)
         
-        label.sizeToFit()
-            self.navigationItem.titleView = label
+        epopView.addSubview(irctcView)
+        epopView.addSubview(olaMoneyView)
+        epopView.addSubview(jioMoneyView)
+        epopView.addSubview(airtelMoneyView)
+        
+        scrollView.addSubview(epopView)
+    }
+    
+    func setNavBar(){
         
         let cris = UIImageView(image: #imageLiteral(resourceName: "cris_logo_blue"))
         cris.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
@@ -38,30 +80,16 @@ class secondVC: SubView {
         logo.clipsToBounds = true
         
         logo.addSubview(cris)
-
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-    
-       
+        
         self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo),UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)], animated: true)
         
-       // self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo)], animated: true)
-    
     }
     
      
    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
 

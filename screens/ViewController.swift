@@ -17,7 +17,7 @@ class ViewController: SubView {
     @IBAction func buttonPressed(_ sender: Any) {
         activityIndicator.isHidden = false
         UIApplication.shared.beginIgnoringInteractionEvents()
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: false)
     }
     @objc func action(){
         activityIndicator.isHidden = true

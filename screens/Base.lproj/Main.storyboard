@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-124" y="-78"/>
         </scene>
-        <!--back1-->
+        <!--home-->
         <scene sceneID="vTC-8c-W0r">
             <objects>
-                <viewController id="92x-gy-jR1" customClass="ViewController" customModule="screens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="home" id="92x-gy-jR1" customClass="ViewController" customModule="screens" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CXd-go-hGa"/>
                         <viewControllerLayoutGuide type="bottom" id="kEv-RP-eda"/>
@@ -40,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LvL-d9-dNe">
-                                <rect key="frame" x="163" y="232" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="232" width="20" height="20"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="TC8-2t-ALP"/>
@@ -62,14 +61,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LvL-d9-dNe" firstAttribute="centerX" secondItem="Vg4-Tg-vpt" secondAttribute="centerX" id="Ody-WC-wC2"/>
                             <constraint firstItem="LvL-d9-dNe" firstAttribute="top" secondItem="CXd-go-hGa" secondAttribute="bottom" constant="168" id="RBn-PZ-Zlx"/>
                             <constraint firstItem="40e-21-Pxi" firstAttribute="centerX" secondItem="Vg4-Tg-vpt" secondAttribute="centerX" id="VoZ-Mz-NL5"/>
-                            <constraint firstItem="LvL-d9-dNe" firstAttribute="leading" secondItem="Vg4-Tg-vpt" secondAttribute="leadingMargin" constant="147" id="iUc-9B-bRd"/>
                             <constraint firstItem="kEv-RP-eda" firstAttribute="top" secondItem="40e-21-Pxi" secondAttribute="bottom" constant="316.5" id="roI-XO-TNY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="back1" id="tRp-oi-ZPg">
-                        <barButtonItem key="backBarButtonItem" title="back1" id="emv-cU-6yE"/>
+                    <navigationItem key="navigationItem" title="home" id="tRp-oi-ZPg">
+                        <barButtonItem key="backBarButtonItem" title="home" id="emv-cU-6yE"/>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="LvL-d9-dNe" id="0Zf-gP-8it"/>
@@ -89,19 +88,101 @@
                         <viewControllerLayoutGuide type="bottom" id="liC-5E-zo1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jsm-D3-7zD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K2-O2-PkZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-ew-WMz" userLabel="contentview">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejC-uk-vFQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ps-O9-rri">
+                                                        <rect key="frame" x="20" y="25.5" width="30" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuX-wc-owc">
+                                                                <rect key="frame" x="1" y="1" width="28" height="28"/>
+                                                                <state key="normal" image="ic_radio_yellow_off"/>
+                                                                <connections>
+                                                                    <action selector="eWalletPressed:" destination="t1e-J1-WXu" eventType="touchUpInside" id="8yh-LK-4kV"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="nuX-wc-owc" firstAttribute="top" secondItem="3ps-O9-rri" secondAttribute="top" constant="1" id="QUc-dl-pj2"/>
+                                                            <constraint firstAttribute="width" constant="30" id="efU-X7-NJg"/>
+                                                            <constraint firstItem="nuX-wc-owc" firstAttribute="leading" secondItem="3ps-O9-rri" secondAttribute="leading" constant="1" id="rmd-Qc-uPG"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nuX-wc-owc" secondAttribute="bottom" constant="1" id="uRs-US-nf9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nuX-wc-owc" secondAttribute="trailing" constant="1" id="w60-ES-4QA"/>
+                                                            <constraint firstAttribute="height" constant="30" id="wDQ-Yc-cUf"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNa-iN-ngX">
+                                                        <rect key="frame" x="70" y="8" width="305" height="64"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.19691297739999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="3Wk-fM-FV1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zNa-iN-ngX" secondAttribute="trailing" id="MRD-98-WF9"/>
+                                                    <constraint firstItem="3ps-O9-rri" firstAttribute="centerY" secondItem="ejC-uk-vFQ" secondAttribute="centerY" id="c82-Tw-BXk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zNa-iN-ngX" secondAttribute="bottom" constant="8" id="cZp-gc-KAy"/>
+                                                    <constraint firstItem="zNa-iN-ngX" firstAttribute="top" secondItem="ejC-uk-vFQ" secondAttribute="top" constant="8" id="hwP-DD-oJO"/>
+                                                    <constraint firstItem="zNa-iN-ngX" firstAttribute="leading" secondItem="3ps-O9-rri" secondAttribute="trailing" constant="20" id="sfD-NI-NBd"/>
+                                                    <constraint firstItem="3ps-O9-rri" firstAttribute="leading" secondItem="ejC-uk-vFQ" secondAttribute="leading" constant="20" id="so5-Uc-zST"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ejC-uk-vFQ" secondAttribute="trailing" id="GJm-Qf-ySn"/>
+                                            <constraint firstAttribute="height" constant="800" id="PWd-Rc-pvq"/>
+                                            <constraint firstItem="ejC-uk-vFQ" firstAttribute="top" secondItem="gLn-ew-WMz" secondAttribute="top" id="TUb-hQ-dDl"/>
+                                            <constraint firstItem="ejC-uk-vFQ" firstAttribute="leading" secondItem="gLn-ew-WMz" secondAttribute="leading" id="uF2-eV-9vd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gLn-ew-WMz" firstAttribute="width" secondItem="6K2-O2-PkZ" secondAttribute="width" id="APX-Uy-RfC"/>
+                                    <constraint firstItem="gLn-ew-WMz" firstAttribute="leading" secondItem="6K2-O2-PkZ" secondAttribute="leading" id="Cvg-db-Fvc"/>
+                                    <constraint firstAttribute="bottom" secondItem="gLn-ew-WMz" secondAttribute="bottom" id="GSF-jW-euj"/>
+                                    <constraint firstAttribute="trailing" secondItem="gLn-ew-WMz" secondAttribute="trailing" id="IoO-4f-TT8"/>
+                                    <constraint firstItem="gLn-ew-WMz" firstAttribute="top" secondItem="6K2-O2-PkZ" secondAttribute="top" id="opS-F6-S8W"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6K2-O2-PkZ" firstAttribute="top" secondItem="as9-WF-0kJ" secondAttribute="bottom" id="LAx-oN-r4a"/>
+                            <constraint firstItem="6K2-O2-PkZ" firstAttribute="leading" secondItem="Jsm-D3-7zD" secondAttribute="leading" id="MEW-8d-Fe9"/>
+                            <constraint firstItem="liC-5E-zo1" firstAttribute="top" secondItem="6K2-O2-PkZ" secondAttribute="bottom" id="blB-QN-Nbd"/>
+                            <constraint firstAttribute="trailing" secondItem="6K2-O2-PkZ" secondAttribute="trailing" id="xfl-Ff-Gmt"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="back" id="TIx-La-qv1">
+                    <navigationItem key="navigationItem" title="payment" id="TIx-La-qv1">
                         <barButtonItem key="backBarButtonItem" title="back" id="0i7-HJ-3Th"/>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="eWalletBtn" destination="nuX-wc-owc" id="enT-TC-VX2"/>
+                        <outlet property="eWalletView" destination="3ps-O9-rri" id="xVu-ZO-3sX"/>
+                        <outlet property="scrollView" destination="6K2-O2-PkZ" id="eAX-td-cOV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wW-8X-ty9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414.5" y="-71.5"/>
+            <point key="canvasLocation" x="1413.5999999999999" y="-72.863568215892059"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_radio_yellow_off" width="192" height="192"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Oko-Tt-sSn"/>
     </inferredMetricsTieBreakers>

@@ -10,6 +10,16 @@ import UIKit
 
 
 class SubView: UIViewController {
+    private let label = UILabel()
+    
+   public func setTitle(title : String){
+        self.label.text = title.uppercased()
+        self.label.sizeToFit()
+    
+    
+    
+        
+    }
     
 
     override func viewDidLoad() {
@@ -71,40 +81,18 @@ class SubView: UIViewController {
         if self.navigationController == nil {
             return
         }
-        
-        // Create a navView to add to the navigation bar
-       let navView = UIView()
-        
-        // Create the label
-        let label = UILabel()
+        self.label.textAlignment = .center
+        label.textColor = UIColor.white
+      
         label.text = "First"
         
         label.sizeToFit()
-        label.center = navView.center
+        
         label.textAlignment = NSTextAlignment.center
         
-        
-       
-        
-        // Add both the label and image view to the navView
-       // navView.addSubview(image)
-        navView.addSubview(label)
-       
-        
         // Set the navigation bar's navigation item's titleView to the navView
-        self.navigationItem.titleView = navView
-        
-        navView.sizeToFit()
+        self.navigationItem.titleView = label
     }
   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
