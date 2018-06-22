@@ -1,0 +1,202 @@
+ [
+  
+  {
+  
+  "bankId": "1000",
+  
+  "bankName": "eWallet",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "54",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Txn Chgs: ₹ 10.0 per transaction (including GST)",
+  
+  "paymentMode": "7",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "99",
+  
+  "bankName": "Payment Gateway",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "1",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "NO Transaction Charge",
+  
+  "paymentMode": "1",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "82",
+  
+  "bankName": "Ola Money",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "54",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Txn Chgs: 1.30 % of net amt + G.S.T as applicable",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  
+  {
+  
+  "bankId": "104",
+  
+  "bankName": "PAYTM WALLET",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "59",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Txn Chgs: 1.8 % of net amt + GST as applicable",
+  
+  "offerMsg": "Upto Rs. 50 Cashback for new wallet users(T&C Apply)",
+  
+  "offerUrl": "https://paytm.com/offer/irctc-offer-anew50/",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "106",
+  
+  "bankName": "Razorpay",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "59",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Credit Card-1.8% + Applicable Taxes, Debit Card- 1.8% + Applicable Taxes, Netbanking- 10/- + Applicable Taxes,  Ewallets- 1.8% + Applicable Taxes",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "108",
+  
+  "bankName": "PayU Money",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "59",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Credit Card-1.8% + Applicable Taxes, Debit Card- 1.8% + Applicable Taxes, Netbanking- 10/- + Applicable Taxes,  Ewallets- 1.8% + Applicable Taxes",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "77",
+  
+  "bankName": "PAYTM",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "59",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Txn Chgs: ₹ 10 for Net Banking,   For Debit Cards: 0.25% for Amt upto ₹ 1000, 0.5% for Amt between ₹ 1001 - 2000 & 1 % for Amt above ₹ 2000, Other options 1.8% of Net Amt + G.S.T as applicable",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  },
+  
+  {
+  
+  "bankId": "74",
+  
+  "bankName": "Mobikwik Wallet",
+  
+  "cardInputFlag": "0",
+  
+  "displaySection": "54",
+  
+  "enableFlag": "true",
+  
+  "groupId": "0",
+  
+  "message": "Txn Chgs: 0.90 % of net amt + G.S.T as applicable",
+  
+  "paymentMode": "13",
+  
+  "travelAgentFlag": "0",
+  
+  "txnPasswordMandatory": "false"
+  
+  }
+  
+  ]
+
+

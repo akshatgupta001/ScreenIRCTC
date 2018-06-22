@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E027BD8220D92483005DA012 /* seTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BD8120D92483005DA012 /* seTLabel.swift */; };
+		E027BDA220DA6E4C005DA012 /* BankDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */; };
+		E027BDA420DA6F20005DA012 /* BankDetailDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = E027BDA320DA6F20005DA012 /* BankDetailDTO.json */; };
 		E0EC1BCB20D0DEAF00DE610D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC1BCA20D0DEAF00DE610D /* AppDelegate.swift */; };
 		E0EC1BCD20D0DEAF00DE610D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC1BCC20D0DEAF00DE610D /* ViewController.swift */; };
 		E0EC1BD020D0DEAF00DE610D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EC1BCE20D0DEAF00DE610D /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		E027BD8120D92483005DA012 /* seTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seTLabel.swift; sourceTree = "<group>"; };
+		E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailDTO.swift; sourceTree = "<group>"; };
+		E027BDA320DA6F20005DA012 /* BankDetailDTO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BankDetailDTO.json; sourceTree = "<group>"; };
 		E0EC1BC720D0DEAF00DE610D /* screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC1BCA20D0DEAF00DE610D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EC1BCC20D0DEAF00DE610D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				E0EC1BD320D0DEAF00DE610D /* LaunchScreen.storyboard */,
 				E0EC1BD620D0DEAF00DE610D /* Info.plist */,
 				E027BD8120D92483005DA012 /* seTLabel.swift */,
+				E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */,
+				E027BDA320DA6F20005DA012 /* BankDetailDTO.json */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E027BDA420DA6F20005DA012 /* BankDetailDTO.json in Resources */,
 				E0EC1BD520D0DEAF00DE610D /* LaunchScreen.storyboard in Resources */,
 				E0EC1C3620D2866F00DE610D /* Assets.xcassets in Resources */,
 				E0EC1BD020D0DEAF00DE610D /* Main.storyboard in Resources */,
@@ -150,6 +157,7 @@
 				E0EC1BDD20D0EE0A00DE610D /* secondVC.swift in Sources */,
 				E0EC1C3220D267F700DE610D /* SubView.swift in Sources */,
 				E0EC1BCD20D0DEAF00DE610D /* ViewController.swift in Sources */,
+				E027BDA220DA6E4C005DA012 /* BankDetailDTO.swift in Sources */,
 				E0EC1BCB20D0DEAF00DE610D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

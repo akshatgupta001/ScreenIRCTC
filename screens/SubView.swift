@@ -84,7 +84,7 @@ class SubView: UIViewController {
         self.label.textAlignment = .center
         label.textColor = UIColor.white
       
-        label.text = "First"
+        label.text = "HOME SCREEN"
         
         label.sizeToFit()
         

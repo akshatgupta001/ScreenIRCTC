@@ -13,6 +13,9 @@ class secondVC: SubView {
     @IBOutlet weak var scrollView: UIScrollView!
     let epopView = UIView()
     
+    var bankDetailDtos = [BankDetailDTO]()
+     var walletArray = [setLabel]()
+    
     @IBOutlet weak var eWalletBtn: UIButton!
     @IBOutlet weak var eWalletView: UIView!
     
@@ -31,14 +34,16 @@ class secondVC: SubView {
     }
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         
-    
+        let path = Bundle.main.path(forResource: "BankDetailDTO", ofType: "json")
+        
+        let url = URL(fileURLWithPath: path!)
+        let data = try? Data(contentsOf:url)
+        
+        bankDetailDtos = try! JSONDecoder().decode([BankDetailDTO].self, from: data!)
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,19 +59,53 @@ class secondVC: SubView {
         
         
         epopView.frame = CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: 90)
+        
+        
+        
+       // var walletArray = [setLabel]()
+        
+         let n = bankDetailDtos.count
+        
+        
        
-        let irctcView = setLabel(frame: .init(), x: 0, y: 0)
-        let olaMoneyView = setLabel(frame: .init(),x: 0,y: 1)
-        let jioMoneyView = setLabel(frame: .init(),x: 1,y: 0)
-        let airtelMoneyView = setLabel(frame: .init(),x: 1,y: 1)
+        for i in 0...n/2-1 {
+            for j in 0...1 {
+                if (2*i+j < n){
+                    let temp = setLabel(frame: .init(), x: CGFloat(i), y: CGFloat(j))
+                    temp.name.text = bankDetailDtos[2*i+j].bankName
+                    temp.name.sizeToFit()
+                    
+                    temp.tag = 2*i+j
+                    let tap = UITapGestureRecognizer(target: self, action: #selector(walletClicked(sender:)))
+                   
+                    temp.addGestureRecognizer(tap)
+                    
+                    walletArray.append(temp)
+                }
+            }
+        }
         
-        epopView.addSubview(irctcView)
-        epopView.addSubview(olaMoneyView)
-        epopView.addSubview(jioMoneyView)
-        epopView.addSubview(airtelMoneyView)
+        for i in walletArray {
         
+            epopView.addSubview(i)
+           
+        }
+        epopView.frame = CGRect(x: 0, y: 90, width: Int(self.view.frame.size.width), height: walletArray.count*70)
+
         scrollView.addSubview(epopView)
     }
+    
+    @objc func walletClicked(sender : UIGestureRecognizer){
+        let id = sender.view?.tag
+        
+        if(walletArray[id!].button.image(for: .normal) == #imageLiteral(resourceName: "ic_radiooff")){
+            walletArray[id!].button.setImage(#imageLiteral(resourceName: "ic_radio_on"), for: .normal)
+        }else{
+            walletArray[id!].button.setImage(#imageLiteral(resourceName: "ic_radiooff"), for: .normal)
+        }
+        
+    }
+   
     
     func setNavBar(){
         
@@ -80,8 +119,6 @@ class secondVC: SubView {
         logo.clipsToBounds = true
         
         logo.addSubview(cris)
-        
-        
         
         self.navigationItem.setRightBarButtonItems([UIBarButtonItem(customView : logo),UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)], animated: true)
         

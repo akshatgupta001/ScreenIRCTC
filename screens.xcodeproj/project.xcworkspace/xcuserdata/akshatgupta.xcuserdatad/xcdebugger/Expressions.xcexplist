@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "secondVC.addEWalletView():secondVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "temp.id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubView.setTitle(title:):SubView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "title.capitalized">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
