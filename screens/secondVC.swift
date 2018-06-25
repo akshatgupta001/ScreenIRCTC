@@ -12,31 +12,23 @@ class secondVC: SubView {
 
     @IBOutlet weak var scrollView: UIScrollView!
     let epopView = UIView()
+    let opopView = UIView()
     
+    
+    let othersBtn = UIButton()
     let othersView = UIView()
+    
     var bankDetailDtos = [BankDetailDTO]()
      var walletArray = [setLabel]()
     
     @IBOutlet weak var eWalletBtn: UIButton!
     @IBOutlet weak var eWalletView: UIView!
     
-    @IBOutlet weak var otherView: UIView!
+   
     
-    @IBAction func OthersBtnPressed(_ sender: Any) {
-        
-    }
     
-//
-//    @IBAction func othersPressed(_ sender: Any) {
-//        if othersBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off") {
-//            othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
-//            addOthersView()
-//        }else {
-//            othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
-//            epopView.removeFromSuperview()
-//        }
-//    }
     
+
     @IBOutlet weak var PayBtn: UIButton!
     
     
@@ -46,10 +38,12 @@ class secondVC: SubView {
             eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
             epopView.isHidden = false
              othersView.frame = CGRect(x: 0, y: 90 + epopView.frame.height, width: self.view.frame.height, height: 90)
+            
         }else {
             eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
             epopView.isHidden = true
              othersView.frame = CGRect(x: 0, y: 90 , width: self.view.frame.height, height: 90)
+            opopView.frame = CGRect(x: 0, y: 180, width: self.view.frame.height, height: 90)
         }
         
        
@@ -60,14 +54,14 @@ class secondVC: SubView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addOtherView()
+        addOtherViewBar()
         
-       otherView.frame = CGRect(x: 0, y: 200, width: self.view.frame.width, height: 90)
+        othersBtn.addTarget(self, action: #selector(othersClicked), for: UIControlEvents.touchUpInside)
         
         PayBtn.setTitle("Pay $590", for: .normal)
         PayBtn.layer.cornerRadius = PayBtn.frame.height/2
         
-    //    othersView.frame = CGRect(x: 0, y: 90+epopView.frame.height, width: self.view.frame.width, height: 90)
+  
         
         let path = Bundle.main.path(forResource: "BankDetailDTO", ofType: "json")
         
@@ -79,7 +73,20 @@ class secondVC: SubView {
         addEWalletView()
        
     }
-    
+    @objc func othersClicked(sender : UIButton)
+    {
+        if othersBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off") {
+            othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
+            addOthersView()
+            opopView.isHidden = false
+            
+        }else {
+            othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
+            opopView.isHidden = true
+            
+        }
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(true)
@@ -119,14 +126,23 @@ class secondVC: SubView {
            
         }
         epopView.frame = CGRect(x: 0, y: 90, width: Int(self.view.frame.size.width), height: walletArray.count*35)
-
         
-        othersView.frame = CGRect(x: 0, y: 90 , width: self.view.frame.height, height: 90)
+        
+        
         epopView.isHidden = true
         scrollView.addSubview(epopView)
     }
     
+    
+    func addOthersView(){
+        
    
+        opopView.frame = CGRect(x: 0, y: 180 , width: self.view.frame.height, height: 90)
+        opopView.backgroundColor = UIColor.yellow
+        
+        opopView.isHidden = true
+        scrollView.addSubview(opopView)
+    }
     @objc func walletClicked(sender : UIGestureRecognizer){
         let id = sender.view?.tag
         
@@ -140,10 +156,21 @@ class secondVC: SubView {
         }
         
     }
+    
+    
    
-    func addOtherView(){
+    func addOtherViewBar(){
         othersView.frame = CGRect(x: 0, y: 90 + epopView.frame.height, width: self.view.frame.height, height: 90)
+        othersBtn.frame = CGRect(x: 20, y: 30, width: 30, height: 30)
+        othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
+        othersView.addSubview(othersBtn)
         othersView.backgroundColor = UIColor(displayP3Red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1)
+        let othersLabel = UILabel()
+        othersLabel.text = "BHIM/UPI, others"
+        othersLabel.frame = CGRect(x: 80, y: 20, width: 300, height: 50)
+        othersLabel.font = UIFont(name: "Avenir Next", size: 20)
+        othersLabel.textColor = UIColor.white
+        othersView.addSubview(othersLabel)
         scrollView.addSubview(othersView)
     }
     
