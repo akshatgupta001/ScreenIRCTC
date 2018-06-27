@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01A24B420E4112600AE7086 /* paytmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A24B320E4112600AE7086 /* paytmVC.swift */; };
 		E027BD8220D92483005DA012 /* seTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BD8120D92483005DA012 /* seTLabel.swift */; };
 		E027BDA220DA6E4C005DA012 /* BankDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */; };
 		E027BDA420DA6F20005DA012 /* BankDetailDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = E027BDA320DA6F20005DA012 /* BankDetailDTO.json */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01A24B320E4112600AE7086 /* paytmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paytmVC.swift; sourceTree = "<group>"; };
 		E027BD8120D92483005DA012 /* seTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seTLabel.swift; sourceTree = "<group>"; };
 		E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailDTO.swift; sourceTree = "<group>"; };
 		E027BDA320DA6F20005DA012 /* BankDetailDTO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BankDetailDTO.json; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E027BD8120D92483005DA012 /* seTLabel.swift */,
 				E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */,
 				E027BDA320DA6F20005DA012 /* BankDetailDTO.json */,
+				E01A24B320E4112600AE7086 /* paytmVC.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E027BD8220D92483005DA012 /* seTLabel.swift in Sources */,
+				E01A24B420E4112600AE7086 /* paytmVC.swift in Sources */,
 				E0EC1BDD20D0EE0A00DE610D /* secondVC.swift in Sources */,
 				E0EC1C3220D267F700DE610D /* SubView.swift in Sources */,
 				E0EC1BCD20D0DEAF00DE610D /* ViewController.swift in Sources */,

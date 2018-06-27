@@ -20,6 +20,7 @@ class secondVC: SubView {
     
     var bankDetailDtos = [BankDetailDTO]()
      var walletArray = [setLabel]()
+    var othersArray = [setLabel]()
     
     @IBOutlet weak var eWalletBtn: UIButton!
     @IBOutlet weak var eWalletView: UIView!
@@ -34,9 +35,14 @@ class secondVC: SubView {
     
     @IBAction func eWalletPressed(_ sender: Any) {
         
-        if eWalletBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off") {
+        if eWalletBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off")  {
             eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
+            if othersBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_on") {
+                othersClicked(sender: UIButton())
+            }
+            opopView.isHidden = true
             epopView.isHidden = false
+            
              othersView.frame = CGRect(x: 0, y: 90 + epopView.frame.height, width: self.view.frame.height, height: 90)
             
         }else {
@@ -76,6 +82,10 @@ class secondVC: SubView {
     @objc func othersClicked(sender : UIButton)
     {
         if othersBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_off") {
+            if(eWalletBtn.image(for: .normal) == #imageLiteral(resourceName: "ic_radio_yellow_on")){
+                eWalletPressed((Any).self)
+            }
+            
             othersBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_on"), for: .normal)
             addOthersView()
             opopView.isHidden = false
@@ -138,7 +148,29 @@ class secondVC: SubView {
         
    
         opopView.frame = CGRect(x: 0, y: 180 , width: self.view.frame.height, height: 90)
-        opopView.backgroundColor = UIColor.yellow
+        let n = 4
+        for i in 0...n/2-1 {
+            for j in 0...1 {
+                if (2*i+j < n){
+                    let temp = setLabel(frame: .init(), x: CGFloat(i), y: CGFloat(j))
+                   // temp.name.text = bankDetailDtos[2*i+j].bankName
+                    temp.name.sizeToFit()
+                    
+                    temp.tag = 2*i+j
+                    let tap = UITapGestureRecognizer(target: self, action: nil)
+                    
+                    temp.addGestureRecognizer(tap)
+                    
+                    othersArray.append(temp)
+                }
+            }
+        }
+        for i in othersArray {
+            
+            opopView.addSubview(i)
+            
+        }
+        opopView.frame = CGRect(x: 0, y: 180, width: Int(self.view.frame.size.width), height: othersArray.count*35)
         
         opopView.isHidden = true
         scrollView.addSubview(opopView)
