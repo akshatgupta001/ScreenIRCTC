@@ -49,7 +49,7 @@ class secondVC: SubView {
             eWalletBtn.setImage(#imageLiteral(resourceName: "ic_radio_yellow_off"), for: .normal)
             epopView.isHidden = true
              othersView.frame = CGRect(x: 0, y: 90 , width: self.view.frame.height, height: 90)
-            opopView.frame = CGRect(x: 0, y: 180, width: self.view.frame.height, height: 90)
+            opopView.frame = CGRect(x: 0, y: 190, width: self.view.frame.height, height: 90)
         }
         
        
@@ -170,7 +170,7 @@ class secondVC: SubView {
             opopView.addSubview(i)
             
         }
-        opopView.frame = CGRect(x: 0, y: 180, width: Int(self.view.frame.size.width), height: othersArray.count*35)
+        opopView.frame = CGRect(x: 0, y: 190, width: Int(self.view.frame.size.width), height: othersArray.count*35)
         
         opopView.isHidden = true
         scrollView.addSubview(opopView)
@@ -183,6 +183,10 @@ class secondVC: SubView {
                 i.button.setImage(#imageLiteral(resourceName: "ic_radiooff"), for: .normal)
             }
             walletArray[id!].button.setImage(#imageLiteral(resourceName: "ic_radio_on"), for: .normal)
+            
+            if id == 3 {
+                performSegue(withIdentifier: "showPaytm", sender: (Any).self)
+            }
         }else{
             walletArray[id!].button.setImage(#imageLiteral(resourceName: "ic_radiooff"), for: .normal)
         }
