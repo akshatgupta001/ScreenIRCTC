@@ -275,9 +275,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-v7-Kzp">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radiooff" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-v7-Kzp">
                                                         <rect key="frame" x="311" y="10" width="40" height="40"/>
-                                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="qEP-MI-uHd"/>
                                                             <constraint firstAttribute="height" constant="40" id="vq9-Ny-CeC"/>
@@ -294,7 +293,7 @@
                                                     <constraint firstItem="3zT-v7-Kzp" firstAttribute="centerY" secondItem="aEb-1K-6ZO" secondAttribute="centerY" id="jXc-G3-gJo"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sy-bV-rGf">
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sy-bV-rGf" userLabel="cardPayment">
                                                 <rect key="frame" x="8" y="205" width="359" height="217"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rfo-2a-0kn">
@@ -360,8 +359,8 @@
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your payment details are secured via 128 Bit encryption by Verisign" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8H-OO-AW6">
-                                                        <rect key="frame" x="42" y="180" width="271.5" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <rect key="frame" x="42" y="180" width="315" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -394,18 +393,43 @@
                                                     <constraint firstAttribute="trailing" secondItem="x29-J0-6dC" secondAttribute="trailing" constant="16" id="uuG-lP-wCM"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQa-TJ-UlZ">
+                                                <rect key="frame" x="8" y="447" width="359" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-G2-Tqp">
+                                                <rect key="frame" x="8" y="550" width="359" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paytm Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xza-p1-Ky8">
+                                                        <rect key="frame" x="8" y="8" width="343" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="359" id="nbT-1o-8XE"/>
+                                                    <constraint firstAttribute="height" constant="100" id="vfO-Md-19M"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aEb-1K-6ZO" secondAttribute="trailing" constant="8" id="7pe-vU-eUG"/>
                                             <constraint firstAttribute="trailing" secondItem="82o-yE-Mlm" secondAttribute="trailing" constant="8" id="DAH-sp-g1U"/>
                                             <constraint firstAttribute="trailing" secondItem="4sy-bV-rGf" secondAttribute="trailing" constant="8" id="EsX-uQ-vR6"/>
+                                            <constraint firstItem="Se5-G2-Tqp" firstAttribute="leading" secondItem="k2k-qS-Sxi" secondAttribute="leading" constant="8" id="GOe-KC-soG"/>
                                             <constraint firstItem="4sy-bV-rGf" firstAttribute="leading" secondItem="k2k-qS-Sxi" secondAttribute="leading" constant="8" id="IZk-7x-qm0"/>
                                             <constraint firstItem="82o-yE-Mlm" firstAttribute="leading" secondItem="k2k-qS-Sxi" secondAttribute="leading" constant="8" id="Lid-Kf-pa9"/>
-                                            <constraint firstItem="4sy-bV-rGf" firstAttribute="top" secondItem="aEb-1K-6ZO" secondAttribute="bottom" constant="1" id="RcH-Dh-geS"/>
+                                            <constraint firstItem="4sy-bV-rGf" firstAttribute="top" secondItem="aEb-1K-6ZO" secondAttribute="bottom" constant="1" id="OXc-xG-X20"/>
                                             <constraint firstItem="aEb-1K-6ZO" firstAttribute="leading" secondItem="k2k-qS-Sxi" secondAttribute="leading" constant="8" id="TUE-k0-DyL"/>
                                             <constraint firstAttribute="height" constant="700" id="UhO-NM-lXP"/>
                                             <constraint firstItem="aEb-1K-6ZO" firstAttribute="top" secondItem="82o-yE-Mlm" secondAttribute="bottom" constant="8" id="iaS-0s-Afv"/>
+                                            <constraint firstAttribute="bottom" secondItem="Se5-G2-Tqp" secondAttribute="bottom" constant="50" id="shu-Wd-xJ4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Se5-G2-Tqp" secondAttribute="trailing" constant="8" id="tcm-iR-AWm"/>
                                             <constraint firstItem="82o-yE-Mlm" firstAttribute="top" secondItem="k2k-qS-Sxi" secondAttribute="top" constant="8" id="zue-Vx-HRZ"/>
                                         </constraints>
                                     </view>
@@ -427,7 +451,12 @@
                             <constraint firstItem="khg-nu-j9N" firstAttribute="top" secondItem="sfT-4d-6Fg" secondAttribute="bottom" id="ruU-xs-JLH"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="NetBankingView" destination="cQa-TJ-UlZ" id="b42-fZ-4QT"/>
+                        <outlet property="cardImg" destination="3zT-v7-Kzp" id="RVp-wX-Gzo"/>
+                        <outlet property="cardPayment" destination="4sy-bV-rGf" id="iIg-jF-AVu"/>
+                        <outlet property="cardView" destination="aEb-1K-6ZO" id="oXQ-Sx-qoJ"/>
                         <outlet property="contentView" destination="k2k-qS-Sxi" id="g7S-sP-lc2"/>
                     </connections>
                 </viewController>
@@ -438,6 +467,7 @@
     </scenes>
     <resources>
         <image name="ic_radio_yellow_off" width="192" height="192"/>
+        <image name="ic_radiooff" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xuZ-vP-9Kw"/>
