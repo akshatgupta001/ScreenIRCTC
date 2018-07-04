@@ -11,6 +11,8 @@
 		E027BD8220D92483005DA012 /* seTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BD8120D92483005DA012 /* seTLabel.swift */; };
 		E027BDA220DA6E4C005DA012 /* BankDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */; };
 		E027BDA420DA6F20005DA012 /* BankDetailDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = E027BDA320DA6F20005DA012 /* BankDetailDTO.json */; };
+		E0ACBC1A20EB7AD90027157E /* PopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC1920EB7AD90027157E /* PopOverVC.swift */; };
+		E0ACBC1C20EB7BFC0027157E /* bankNameShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACBC1B20EB7BFC0027157E /* bankNameShared.swift */; };
 		E0EC1BCB20D0DEAF00DE610D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC1BCA20D0DEAF00DE610D /* AppDelegate.swift */; };
 		E0EC1BCD20D0DEAF00DE610D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC1BCC20D0DEAF00DE610D /* ViewController.swift */; };
 		E0EC1BD020D0DEAF00DE610D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EC1BCE20D0DEAF00DE610D /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		E027BD8120D92483005DA012 /* seTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seTLabel.swift; sourceTree = "<group>"; };
 		E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailDTO.swift; sourceTree = "<group>"; };
 		E027BDA320DA6F20005DA012 /* BankDetailDTO.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BankDetailDTO.json; sourceTree = "<group>"; };
+		E0ACBC1920EB7AD90027157E /* PopOverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverVC.swift; sourceTree = "<group>"; };
+		E0ACBC1B20EB7BFC0027157E /* bankNameShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankNameShared.swift; sourceTree = "<group>"; };
 		E0EC1BC720D0DEAF00DE610D /* screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EC1BCA20D0DEAF00DE610D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EC1BCC20D0DEAF00DE610D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				E027BDA120DA6E4C005DA012 /* BankDetailDTO.swift */,
 				E027BDA320DA6F20005DA012 /* BankDetailDTO.json */,
 				E01A24B320E4112600AE7086 /* paytmVC.swift */,
+				E0ACBC1920EB7AD90027157E /* PopOverVC.swift */,
+				E0ACBC1B20EB7BFC0027157E /* bankNameShared.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 				E0EC1C3220D267F700DE610D /* SubView.swift in Sources */,
 				E0EC1BCD20D0DEAF00DE610D /* ViewController.swift in Sources */,
 				E027BDA220DA6E4C005DA012 /* BankDetailDTO.swift in Sources */,
+				E0ACBC1C20EB7BFC0027157E /* bankNameShared.swift in Sources */,
+				E0ACBC1A20EB7AD90027157E /* PopOverVC.swift in Sources */,
 				E0EC1BCB20D0DEAF00DE610D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
