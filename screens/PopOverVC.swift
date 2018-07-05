@@ -18,7 +18,40 @@ class PopOverVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UI
     
     @IBOutlet weak var tableView: UITableView!
     
-    var names: [String] = ["Mumbai","New York","Tokyo","London","Beijing","Sydney","Wellington","Madrid","Rome","Cape Town","Ottawa"]
+    var names: [String] = ["Andaman and Nicobar State Co-operative Bank",
+        "AP State Co-operative Bank",
+        "Arunachal Pradesh State Co-operative Apex Ban",
+        "Assam Co-operative Apex Bank",
+        "Bihar State Co-operative Bank",
+        "Chandigarh State Co-operative Bank",
+        "Chhattisgarh Rajya Sahakari Bank Maryadit",
+        "Delhi State Co-operative Bank",
+        "Goa State Co-operative Bank ltd",
+        "Gujarat State Cooperative Agriculture and Rural Development Bank Lt.",
+        "Gujarat State Co-operative Bank",
+        "Haryana State Co-operative Apex Bank",
+    "Himachal Pradesh State Co-operative Bank",
+        "Jammu and Kashmir State Co-operativ Bank",
+        "Jharkhand State Co-operative Bank",
+        "Karnataka State Co-operative Apex Bank Bangalore",
+        "Kerala State Co-operative Bank",
+       "Madhya Pradesh Rajya Sahakari Bank Maryadit",
+       "Maharashtra State Co-operative Bank",
+       "Manipur State Co-operative Bank",
+   "Meghalaya Co-operative Apex Bank",
+   "Mizoram Co-operative Apex Bank",
+    "    Nagaland State Co-operative Bank",
+     "   Odisha State Co-Operative Bank",
+        "Pondichery State Co-operative Bank",
+        "Punjab State Co-operative Bank",
+        "Rajasthan State Co-operative Bank",
+        "Sikkim State Co-operative Bank",
+        "The Tamil Nadu State Apex Co-operative Bank",
+        "Telangana State Co-Operative Apex Bank Limited",
+        "Tripura State Co-operative Bank",
+        "Uttar Pradesh Co-operative Bank",
+        "Uttarakhand State Co-operative Bank",
+        "West Bengal State Co-operative Bank"]
     
     var filteredNames : [String] = []
     
@@ -79,11 +112,7 @@ class PopOverVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UI
         return cell
     }
     
-    // Close PopUp
-    @IBAction func closePopup(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-    }
+   
 }
 
 

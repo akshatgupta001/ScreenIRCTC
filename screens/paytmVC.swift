@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 class paytmVC: UIViewController {
+    let separatorWidth : CGFloat = 6
     @IBOutlet weak var contentView: UIView!
    
     @IBOutlet weak var NetBankingView: UIView!
@@ -24,10 +24,14 @@ class paytmVC: UIViewController {
     @IBOutlet weak var payBtn: UIButton!
     
     
+    var datePicker : UIDatePicker?
+    
     @IBOutlet weak var NetBankingImg: UIImageView!
     @IBOutlet weak var cardImg: UIImageView!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var TicketView: UIView!
     
+    @IBOutlet weak var PaytmWalletView: UIView!
     @IBOutlet weak var bankButton: UIButton!
     @IBOutlet weak var cardPayment: UIView!
     
@@ -38,10 +42,20 @@ class paytmVC: UIViewController {
         print(CardNumber.text ?? "card")
         print(expiryDate.text ?? "expiry date")
     }
+    @IBAction func expiryDateDidChange(_ sender: Any) {
+        guard let str : String = expiryDate?.text! else {return}
+        if (str.count == 2 && !str.contains("/")){
+            
+            expiryDate.text?.append("/")
+        }else if( str.count < 2 && str.contains("/")) {
+          expiryDate?.text?.removeAll()
+        }
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        NetBankingView.frame = CGRect(x: 0, y: 210, width: view.frame.width , height: 60)
-        BankView.frame = CGRect(x: 0, y: 271, width: view.frame.width, height: 65)
+        NetBankingView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height + 3*separatorWidth, width: view.frame.width , height: 60)
+        BankView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height + 3*separatorWidth + NetBankingView.frame.height, width: view.frame.width, height: 65)
         let cn : String = bankNameShared.shared.bankName ?? "Select Company"
         bankButton.setTitle(cn, for: .normal)
        
@@ -54,10 +68,12 @@ class paytmVC: UIViewController {
        
         setNavBar()
         
+        
+        
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(creditTap))
         cardView.addGestureRecognizer(tap)
-//        let tap2 = UITapGestureRecognizer(target: self, action: #selector(NetBankingTap))
-//        NetBankingView.addGestureRecognizer(tap2)
+       
         
         let tap3 = UITapGestureRecognizer(target: self, action: #selector(BankSelect))
         BankView.addGestureRecognizer(tap3)
@@ -66,13 +82,20 @@ class paytmVC: UIViewController {
         
       
     }
+    
+   
+    
     func dragDown(){
-        NetBankingView.frame = CGRect(x: 0, y: 430, width: view.frame.width, height: 60)
-        BankView.frame = CGRect(x: 0, y: 491, width: view.frame.width, height: 65)
+        BankView.isHidden = true
+        NetBankingView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height+cardPayment.frame.height + 3*separatorWidth, width: view.frame.width, height: 60)
+        BankView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height+cardPayment.frame.height + 60 + 3*separatorWidth, width: view.frame.width, height: 65)
+        PaytmWalletView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height+cardPayment.frame.height + NetBankingView.frame.height + 4*separatorWidth , width: view.frame.width, height: 65)
     }
     func dragUp(){
-        NetBankingView.frame = CGRect(x: 0, y: 210, width: view.frame.width, height: 60)
-        BankView.frame = CGRect(x: 0, y: 271, width: view.frame.width, height: 65)
+        //TicketView.frame.height + cardView.frame.height+24 =210
+        NetBankingView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height + 3*separatorWidth, width: view.frame.width, height: 60)
+        BankView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height+60 + 3*separatorWidth + 60, width: view.frame.width, height: 65)
+        PaytmWalletView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height + NetBankingView.frame.height + 4*separatorWidth , width: view.frame.width, height: 65)
     }
   
     @objc func BankSelect(){
@@ -97,6 +120,7 @@ class paytmVC: UIViewController {
         
             BankView.isHidden = false
         cardPayment.isHidden = true
+         PaytmWalletView.frame = CGRect(x: 0, y: TicketView.frame.height + cardView.frame.height + BankView.frame.height + NetBankingView.frame.height + 4*separatorWidth , width: view.frame.width, height: 65)
 
         
     }
